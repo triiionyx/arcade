@@ -3,8 +3,6 @@ function init() {
 }
 window.touch = {
     click: {
-        nav: target => {
-            ''.router();
-        }
+        nav: path => path.router()
     }
 }

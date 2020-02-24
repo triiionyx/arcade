@@ -15,9 +15,8 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/cdn/png/apple-touch-icon.png">
     <link async="" rel="stylesheet" href="/index.css" media="all">
-    <script src="/cdn/js/firebase-app.js"></script>
-    <script src="/cdn/js/firebase-auth.js"></script>
-    <script async src='/index.js'></script>
+    <script async src='index.js'></script>
+    <script async src='router.js'></script>
   </head>
 
   <body id="body" onclick="event.target.id==='body' ? '/'.router() : null" onload="init(window.location.pathname+window.location.hash)">
@@ -48,11 +47,13 @@
         <div data-before="&#x1F4F0;" data-after="blog" onclick="'/blog/'.router()"></div>
         <div data-before="&#x1F465;" data-after="users" onclick="'/users/'.router()"></div
       </section>
-    </nav>
+    </nav>  
 
+    <video id="camera"></video>
     <audio id="audio"></audio>
-    <iframe id="iframe"></iframe>
     <video id="video"></video>
+    <iframe id="games"></iframe>
+    <iframe id="iframe"></iframe>
 
   </body>
 
