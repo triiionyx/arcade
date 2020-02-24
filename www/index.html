@@ -15,8 +15,8 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/cdn/png/apple-touch-icon.png">
     <link async="" rel="stylesheet" href="/index.css" media="all">
-    <script async src='index.js'></script>
-    <script async src='router.js'></script>
+    <script async src='/index.js'></script>
+    <script async src='/router.js'></script>
   </head>
 
   <body id="body" onclick="event.target.id==='body' ? '/'.router() : null" onload="init(window.location.pathname+window.location.hash)">
@@ -35,25 +35,25 @@
     </noscript>
 
     <nav>      
-      <section onclick="touch.click.nav(event.target)">
-        <div data-before="&#x1F464;" data-after="account" onclick="'/account/'.router()"></div>
-        <div data-before="&#x1F9F0;" data-after="settings" onclick="'/settings/'.router()"></div>
-        <div data-before="&#x1F4F7;" data-after="webcam" onclick="'/webcam/'.router()"></div>
-        <div data-before="&#x1F3B5;" data-after="music" onclick="'/music/'.router()"></div>
-        <div data-before="&#x1F39E;&#xFE0F;" data-after="videos" onclick="'/videos/'.router()"></div>      
-        <div data-before="&#x1F4FA;" data-after="streams" onclick="'/streams/'.router()"></div>
-        <div data-before="&#x1F3AE;" data-after="game" onclick="'/game/'.router()"></div>
+      <section onclick="touch.click.nav(event.target.dataset && event.target.dataset.href ? event.taget.dataset.href : null)">
+        <div data-before="&#x1F464;" data-after="account" data-href="/account/"></div>
+        <div data-before="&#x1F9F0;" data-after="settings" data-href="/settings/"></div>
+        <div data-before="&#x1F4F7;" data-after="webcam" data-href="/webcam/"></div>
+        <div data-before="&#x1F3B5;" data-after="music" data-href="/music/"></div>
+        <div data-before="&#x1F39E;&#xFE0F;" data-after="videos" data-href="/videos/"></div>      
+        <div data-before="&#x1F4FA;" data-after="streams" data-href="/streams/"></div>
+        <div data-before="&#x1F3AE;" data-after="game" data-href="/game/">
+          <div>
+            <div>Finding You</div>
+            <div>oVerse</div>
+          </div>    
+          <iframe id="iframe"></iframe>
+        </div>
         <div data-before="&#x1F310;" data-after="intranet" onclick="'/intranet/'.router()"></div>
         <div data-before="&#x1F4F0;" data-after="blog" onclick="'/blog/'.router()"></div>
-        <div data-before="&#x1F465;" data-after="users" onclick="'/users/'.router()"></div
+        <div data-before="&#x1F465;" data-after="users" onclick="'/users/'.router()"></div>
       </section>
-    </nav>  
-
-    <video id="camera"></video>
-    <audio id="audio"></audio>
-    <video id="video"></video>
-    <iframe id="games"></iframe>
-    <iframe id="iframe"></iframe>
+    </nav>
 
   </body>
 
